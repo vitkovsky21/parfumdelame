@@ -1,0 +1,33 @@
+<section class="home">
+
+    <section class="home">
+
+        <div class="swiper home-slider">
+     
+           <swiper 
+              #swiper
+              [config]="swiperConfig"
+              class="swiper-wrapper" 
+              >
+     
+              <ng-template swiperSlide *ngFor="let slide of slides" class="swiper-slide slide" >
+                 <div class="swiper-slide slide" style="background:url( {{slide.image}} ) no-repeat">
+                  
+                   <div class="content">
+                      
+                      <h3>{{ slide.text }}</h3>
+                      <a href="package.php" class="btn">Каталог</a>
+
+                  </div>
+                  
+                 </div>
+              </ng-template>
+              
+           </swiper>
+     
+     
+        </div>
+     
+     </section>
+ 
+ </section>

@@ -1,0 +1,32 @@
+<section class="header" (window:scroll)="disable()">
+
+    <img routerLink="/" src="../../assets/logoparfum.jpg" alt="Parfum de l'âme" class="logo">
+
+    <div class="search-form" [ngClass]="{ active: search }" (keypress)="searchProduct()">
+        <input type="search" id="search-box" placeholder="поиск..." [(ngModel)]="searchTerm">
+        <label for="search-box" class="fas fa-search" (click)="searchProduct()"></label>
+    </div>
+ 
+    <nav class="navbar" [ngClass]="{active: navbar}">
+       <a routerLink="">Главная</a>
+       <a routerLink="/about">О Нас</a>
+       <a routerLink="/catalog">Каталог</a>
+       <a href="book.php">Контакты</a>
+    </nav>
+
+    <div class="icons"> 
+
+       <div id="menu-btn" 
+            class="fas fa-bars" 
+            (click)="menuToggle()" 
+            [ngClass]="{ 'fa-times': menu }">
+       </div>
+
+       <div id="search-btn" 
+            class="fas fa-search" 
+            (click)="searchToggle()">
+       </div>
+
+    </div> 
+ 
+ </section>
