@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './views/about/about.component';
 import { CatalogComponent } from './views/catalog/catalog.component';
 import { FormsModule } from '@angular/forms';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     MainComponent,
     FooterComponent,
     AboutComponent,
-    CatalogComponent
+    CatalogComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
