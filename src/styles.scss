@@ -149,6 +149,11 @@ section {
        font-size: 10vw;
     }
 
+    .cursor-1,
+    .cursor-2{
+        display: none;
+    }
+
  }
  
  @media (max-width:768px){

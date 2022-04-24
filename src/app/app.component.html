@@ -1,5 +1,5 @@
-<div class="cursor-1" #cursor1></div>
-<div class="cursor-2" #cursor2></div>
+<div class="cursor-1" #cursor1 [hidden]="!toggler"></div>
+<div class="cursor-2" #cursor2 [hidden]="!toggler"></div>
 <app-loader></app-loader>
 
 <div [hidden]="!toggler">
