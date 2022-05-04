@@ -2,7 +2,7 @@
 
    <h1 class="heading-title"> Категории товаров </h1>
 
-   <div class="box-container">
+   <div class="box-container" (click)="scroll(target)">
 
       <div class="box" (click)="sortByCategories(0)">
          <img src="../assets/icon-1.png" alt="image">
@@ -31,7 +31,7 @@
 
 <section class="packages">
 
-    <h1 class="heading-title">Каталог</h1>
+    <h1 class="heading-title" #target>Каталог</h1>
 
     <mat-paginator [length]="this.startProducts.length"
                    [pageSize]="10"

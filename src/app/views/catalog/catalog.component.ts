@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Products } from 'src/app/class/products';
 import { TestData } from 'src/app/data/TestData';
@@ -66,6 +66,10 @@ export class CatalogComponent implements OnInit {
     }
     
     this.previousPageIndex = event.pageIndex;
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 
 }
