@@ -65,7 +65,7 @@
  .packages .box-container .box .image img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: .2s linear;
  }
  
@@ -90,3 +90,4 @@
     text-align: center;
     margin-top: 2rem;
  }
+

@@ -110,6 +110,14 @@ section {
    background: var(--white);
 }
 
+.mat-paginator-page-size {
+   display: none !important;
+}
+
+.mat-paginator-container {
+   padding: 1.2rem 0 !important;
+}
+
 
 
 

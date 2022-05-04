@@ -32,6 +32,12 @@
 <section class="packages">
 
     <h1 class="heading-title">Каталог</h1>
+
+    <mat-paginator [length]="this.startProducts.length"
+                   [pageSize]="10"
+                   [pageIndex]="pageIndex"
+                   (page)="onPageChange($event)">
+    </mat-paginator>
  
     <div class="box-container">
  

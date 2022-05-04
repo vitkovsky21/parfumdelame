@@ -12,6 +12,7 @@ import { AboutComponent } from './views/about/about.component';
 import { CatalogComponent } from './views/catalog/catalog.component';
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './loader/loader.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LoaderComponent } from './loader/loader.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    [SwiperModule]
+    [SwiperModule],
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,31 +21,6 @@ export class TestData {
      ]
 
      static products: Products[] = [
-       { 
-         id: 1, 
-         name: "Ароматическая Свеча «LEMON CURD»", 
-         image: "../assets/img-1.jpg",
-         price: "800₽",
-         category: TestData.categories[2],
-         about: "Селективный аромат от мануфактуры Евгения Гора для настоящих гурманов!" 
-       },
-       { 
-        id: 2, 
-        name: "Свеча Французский сад", 
-        image: "../assets/img-2.jpg",
-        price: "800₽",
-        category: TestData.categories[2],
-        about: "Вдохновленный романтическими садами Франции, аромат переносит вас в самое сердце благоухающего рая." 
-      },
-      { 
-        id: 3, 
-        name: "Портативный диффузор Drop", 
-        image: "../assets/img-3.jpg",
-        price: "800₽",
-        category: TestData.categories[3],
-        about: "Идеальный спутник дома, на работе и в машине. Интенсивное увлажнение скрасит долгую дорогу или напряженный рабочий день.",
-        link: "https://vk.com/market-161123001?section=album_31&w=product-161123001_6617564%2Fquery" 
-      },
       { 
         id: 4, 
         name: "Парфюмерная вода Enfes XXVIII", 
@@ -198,6 +173,33 @@ export class TestData {
         category: TestData.categories[0],
         about: "Санталь нуар — это аромат, сотканный из свежести зелёных нот, играющих в сердце мягкой, волнующей сладостью кокоса и элегантный шлейф из благородного сантала.",
         link: "https://vk.com/market-161123001?section=album_59&w=product-161123001_5270354%2Fquery"
+      },
+      { 
+        id: 100, 
+        name: "Ароматическая Свеча «LEMON CURD»", 
+        image: "../assets/img-1.jpg",
+        price: "800₽",
+        category: TestData.categories[2],
+        about: "Селективный аромат от мануфактуры Евгения Гора для настоящих гурманов!",
+        link: "https://vk.com/market-161123001?q=lemon&w=product-161123001_6579847%2Fquery"
+      },
+      { 
+       id: 101, 
+       name: "Свеча Французский сад", 
+       image: "../assets/img-2.jpg",
+       price: "800₽",
+       category: TestData.categories[2],
+       about: "Вдохновленный романтическими садами Франции, аромат переносит вас в самое сердце благоухающего рая.",
+       link: "https://vk.com/market-161123001?q=%D1%81%D0%B0%D0%B4&w=product-161123001_6622410%2Fquery"
+      },
+      { 
+        id: 102, 
+        name: "Портативный диффузор Drop", 
+        image: "../assets/img-3.jpg",
+        price: "800₽",
+        category: TestData.categories[3],
+        about: "Идеальный спутник дома, на работе и в машине. Интенсивное увлажнение скрасит долгую дорогу или напряженный рабочий день.",
+        link: "https://vk.com/market-161123001?section=album_31&w=product-161123001_6617564%2Fquery" 
       },
       { 
         id: 21, 

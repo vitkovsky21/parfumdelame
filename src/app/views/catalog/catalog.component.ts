@@ -4,6 +4,8 @@ import { Products } from 'src/app/class/products';
 import { TestData } from 'src/app/data/TestData';
 import { DataHandlerServiceService } from 'src/app/services/data-handler-service.service';
 
+import { MatPaginatorModule, PageEvent } from '@angular/material/paginator'
+
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -12,8 +14,16 @@ import { DataHandlerServiceService } from 'src/app/services/data-handler-service
 export class CatalogComponent implements OnInit {
 
   public products: any;
-  categories: any;
+  public startProducts = TestData.products;
   public sortedProducts: string[] = [];
+  public sliceProducts!: any;
+
+  categories: any;
+  pageIndex!: number;
+  previousPageIndex!: number;
+
+  public startIndex = 0;
+  public endIndex = 9;
 
   constructor(private route: ActivatedRoute, private dataHandler: DataHandlerServiceService) { }
 
@@ -23,7 +33,7 @@ export class CatalogComponent implements OnInit {
       if (params.searchTerm)
         this.products = TestData.products.filter(product => product.name.toLowerCase().includes(params.searchTerm.toLowerCase()));
       else
-        this.products = TestData.products;
+        this.products = TestData.products.slice(this.startIndex, this.endIndex);
     })
   }
 
@@ -36,6 +46,26 @@ export class CatalogComponent implements OnInit {
       }
     })
     this.sortedProducts = [];
+  }
+
+  onPageChange(event: PageEvent) {
+    if (event.pageIndex > this.previousPageIndex || undefined) {
+      this.startIndex += 10;
+      this.endIndex += 10;
+      this.products = TestData.products.slice(this.startIndex, this.endIndex)
+    }
+    else if (event.pageIndex < this.previousPageIndex) {
+      this.startIndex -= 10;
+      this.endIndex -= 10;
+      this.products = TestData.products.slice(this.startIndex, this.endIndex)
+    }
+    else {
+      this.startIndex += 10;
+      this.endIndex += 10;
+      this.products = TestData.products.slice(this.startIndex, this.endIndex)
+    }
+    
+    this.previousPageIndex = event.pageIndex;
   }
 
 }
